@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TABLES</title>
+
+<style>
+    table {
+        width: 100%;
+    }
+    .table-one {
+        border-spacing: 10px;
+    }
+    .table-one th {
+        background: black;
+        color: white;
+    }
+    .table-one th, 
+    .table-one td {
+        border: 2px solid green;
+        padding: 20px;
+    }
+    .table-one td.td-one {
+        background: blueviolet;
+        color:greenyellow;
+        font-size: 21px;
+    }
+    .table-one td.td-two {
+        border: none;
+    }
+    .table-one td.td-three {
+        padding: 0;
+    }
+    .table-two {
+        border-spacing: 0;
+    }
+    .table-two caption {
+        text-align: left; font-size: 30px;
+        margin: 20px 0;
+    }
+    .table-two td,
+    .table-two th {
+        border: none;
+        border-bottom: 1px dashed grey;
+        padding: 5px;
+    }
+    .table-two tr:nth-child(odd) {
+        background: rgb(198, 240, 236);
+    }
+    .table-two tr:nth-child(odd):hover {
+        background: transparent;
+    }
+    .table-two tr:nth-child(even):hover {
+        background: rgb(198, 240, 236);
+    }
+</style>
+
+<div style="width: 80%; margin: 40px auto 0;">
+    <table class="table-one">
+        <caption>(table caption)</caption>
+            <tr>
+                <th colspan="5"><h1>(th colspan = 5)(h1)(bg = black)(color = white)</h1></th>
+            </tr>
+            <tr>
+                <td width="30%">(td width = 30%)</td>
+                <td> </td>
+                <td rowspan="3" class="td-one">
+                    (td rowspan = 3)(bg = blueviolet)(color = greenyellow)(font = 21px)
+                </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td class="td-two">(td no border)</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td colspan="4">(td colspan = 4)(have table inside)
+                    <table class="table-two">
+                        <caption>(td odd = bg)(td odd on hover =/= bg)(td even on hover = bg)</caption>
+                        <tr>
+                            <td>Odd</td>
+                            <td style="text-align: right;">(align = right)</td>
+                        </tr>
+                        <tr>
+                            <td>Even</td>
+                            <td style="text-align: right;">(align = right)</td>
+                        </tr>
+                        <tr>
+                            <td>Odd</td>
+                            <td style="text-align: right;">(align = right)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="td-three">(td no padding)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
